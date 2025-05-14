@@ -13,7 +13,7 @@ public class SendMailController {
     @GetMapping("/send-email")
     public String sendEmail() {
         try {
-            mailService.sendEmail("xp55220012@gmail.com", "Subject of the email", "Body of the email");
+            mailService.sendEmail("example@gmail.com", "Subject of the email", "Body of the email");
             return "Email sent successfully!";
         } catch (MessagingException e) {
             return "Failed to send email: " + e.getMessage();
